@@ -27,7 +27,19 @@ create table Tranche_prix (
 );
 
 create table Eleves (
-    idEleves ,
-
+    idEleves integer not null default AUTOINCREMENT,
+    NomEleves varchar(50) not null,
+    MDP varchar(50) not null,
+    Nom varchar(40) not null,
+    Prenom varchar(40) not null,
     constraint pk_Eleves primary key (IdEleves)
+);
+
+create table Profs_inscription (
+    IdProfs integer not null default AUTOINCREMENT,
+    NomProfs varchar(50) not null,
+    MDP varchar(50) not null,
+    Nom varchar(40) not null,
+    Prenom varchar(40) not null,
+    constraint pk_Profs_inscription primary key (IdUtilisateur)
 );
