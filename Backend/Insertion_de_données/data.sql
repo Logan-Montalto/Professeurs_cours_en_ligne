@@ -51,5 +51,8 @@ INSERT INTO dba.Matieres_professeurs (idProfesseurs, idMatieres)
  ('P09', 'M12')
  ('P10', 'M07')
 
-INSERT INTO dba.Tranche_prix (idPrix)
-
+INSERT INTO dba.Tranche_prix (idPrix, Prix)
+('PR01', '5€ -> 7€')
+('PR02', '7€ -> 9€')
+('PR03', '9€ -> 11€')
+('PR04', '11€ -> 14€')
