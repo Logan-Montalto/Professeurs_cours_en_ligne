@@ -1,3 +1,0 @@
--n site_prof "C:\Users\Logan\Documents\Ephec\seconde_sess\site_prof\Frontend\site_prof.db"
--x tcpip
--xs http(port=80)
