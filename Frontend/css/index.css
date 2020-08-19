@@ -1,0 +1,55 @@
+body {
+    margin: 10px 0;
+    padding: 0;
+    text-align: center;
+    font: 0.8em "Trebuchet MS", helvetica, sans-serif;
+    background: #3cc4d3;
+}
+
+h1#head {
+    height: 258px;
+    margin: 0;
+    background: url("../img-site/cours.jpg") no-repeat;
+}
+
+h1 {
+    text-align: left;
+}
+
+ul#horizontal {
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    background: deepskyblue;
+    list-style-type: none;
+}
+
+ul#horizontal li {
+    float: left;
+    text-align: center;
+}
+
+ul#horizontal li a {
+    width: 125px;
+    line-height: 40px;
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    display: block;
+    text-decoration: yellow;
+    border-right: 3px solid darkblue;
+}
+
+div#contenu {
+    width: 770px;
+    margin: 0 auto;
+    text-align: left;
+    border: 2px solid darkblue;
+    background: #ffffff;
+}
+
+div#about p {
+    text-decoration: none;
+
+}
