@@ -6,27 +6,20 @@
     <script src="js/site_prof.js" type="text/javascript"></script>
     <link href="css/index.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
-    <h1>Cours Particuliers en ligne</h1>
-        <ul class="horizontal">
-            <li>Home</li>
-            <li>Connexion</li>
-            <li>Inscription</li>
-            <li>About</li>
-            <li onclick="window.open('connexion.html', '_self')" class="rightLi">Logout</li>
-        </ul>
-            <SELECT name="Niveau" onChange='Choix(this.form)'>
-                <OPTION>-- Choisissez un niveau d'études ---</OPTION>
-                <OPTION>Primaire</OPTION>
-                <OPTION>Secondaire</OPTION>
-                <OPTION>Supérieur</OPTION>
-            </SELECT>
-            <br><br>
-            <SELECT name="Matieres">
-                <OPTION>-- Choisissez une matière ---</OPTION>
-                <OPTION></OPTION>
-                <OPTION></OPTION>
-                <OPTION></OPTION>
-            </SELECT>
+    <div id="contenu">
+        <h1 id="head">Cours Particuliers en ligne</h1>
+
+        <nav>
+            <ul id="horizontal">
+                <li><a href="index.html">Home</li>
+                <li><a href="coursParticuliers.html">Cours</li>
+                <li><a href="connexion.html">Connexion</li>
+                <li><a href="inscription.html">Inscription</li>
+                <li><a href="about.html">About</li>
+            </ul>
+        </nav>
+    </div>
 </body>
 </html>
