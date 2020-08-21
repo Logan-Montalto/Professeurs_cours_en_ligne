@@ -51,3 +51,9 @@ function Choix(form) {
     }
 }
 
+var coursParticuliers = new Object();
+
+function initialiserPage() {
+    coursParticuliers = {};
+    document.querySelectorAll("section")[1].innerHTML = "<table><thead><th>Nom de l'élève</th><th>Date du cours</th><th>Professeur</th><th>Nombre d'heures de cours</th><th>Prix Total</th></thead><tbody id='cours_particuliers'></tbody></table>";
+}
