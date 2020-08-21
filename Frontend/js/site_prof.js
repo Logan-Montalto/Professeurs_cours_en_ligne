@@ -6,6 +6,19 @@
  * @date 09-July-2020
  */
 
+var professeurs = {
+    P01: {Nom: 'Dumbledore', Prenom: 'Albus', Niveau: "Supérieur", Matieres:"Psychologie", Prix: 14},
+    P02: {Nom: 'Farnsworth', Prenom: 'Hubert', Niveau: "Primaire", Matieres: "Mathématiques", Prix: 7},
+    P03: {Nom: 'Hoover', Prenom: 'Elizabeth', Niveau: "Primaire", Matieres: "Français", Prix: 8},
+    P04: {Nom: 'Jones', Prenom: 'Indiana', Niveau: "Supérieur", Matieres:"Géographie", Prix: 9},
+    P05: {Nom: 'Langdon', Prenom: 'Robert', Niveau: "Supérieur", Matieres:"Histoire", Prix: 7},
+    P06: {Nom: 'McGonagall', Prenom: 'Minerva', Niveau: "Supérieur", Matieres:"Droit", Prix: 11},
+    P07: {Nom: 'Suresh', Prenom: 'Mohinder', Niveau: "Supérieur", Matieres:"Chimie", Prix: 10},
+    P08: {Nom: 'Mosby', Prenom: 'Ted', Niveau: "Supérieur", Matieres:"Architecture", Prix: 13},
+    P09: {Nom: 'Tournesol', Prenom: 'Tryphon', Niveau: "Secondaire", Matieres:"Sciences", Prix: 9},
+    P10: {Nom: 'Xavier', Prenom: 'Charles', Niveau: "Supérieur", Matieres:"Biologie", Prix: 15},
+    };
+
 // Liste déroulante dynamique
 
 function Choix(form) {
