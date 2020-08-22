@@ -5,21 +5,28 @@
     <title>Title</title>
 </head>
 <body>
-    <SELECT name="Niveau" onChange='Choix(this.form)'>
-        <OPTION>-- Choisissez un niveau d'études ---</OPTION>
-        <OPTION>Primaire</OPTION>
-        <OPTION>Secondaire</OPTION>
-        <OPTION>Supérieur</OPTION>
-    </SELECT>
-    <br><br>
-    <SELECT name="Matieres">
-        <OPTION>-- Choisissez une matière ---</OPTION>
-        <OPTION></OPTION>
-        <OPTION></OPTION>
-        <OPTION></OPTION>
-    </SELECT>
-
-    <!-- choisir un nombre d'heures qui déterminera le prix du cours particuliers
-    et ensuite tout afficher en résumé -->
+    <form name="formMatiere">
+    <table>
+        <tr>
+            <th>Niveau de cours&nbsp;:</th>
+            <th>Matières&nbsp;:</th>
+            <th>Professeurs&nbsp;:</th>
+        </tr>
+        <tr>
+            <td><select name="Niveau" onChange='Choix(this.form)'>
+                <option>--- Choisissez un niveau d'études ---</option>
+                <option>Primaire</option>
+                <option>Secondaire</option>
+                <option>Supérieur</option>
+            </select></td>
+            <td><select id="Matieres" name="Matieres" onChange='Prof(this.form)'>
+                <option>--- Choisissez une matière ---</option>
+            </select></td>
+            <td><select id="Profs" name="Profs" onChange='tableau(this.form)'>
+                <option>--- Choisissez un professeur ---</option>
+            </select></td>
+        </tr>
+    </table>
+</form>
 </body>
 </html>
