@@ -17,6 +17,5 @@ Cependant, comme je ne dois plus repasser cette partie, les HTML sont toujours l
 
 Des pages web (html, js, css) contenant :
 
-- une page d'accueil qui liste, avec des images, les professeurs disponibles
-- une liste déroulante dynamique permettant de choisir un niveau d'étude et la matière adéquate
+- une liste déroulante dynamique permettant de choisir un niveau d'étude et la matière adéquate ainsi que le professeur disponible pour cette matière
 - un tableau récapitulatif de la réservation du cours particuliers (Nom de l'élève, date du cours, Professeur, Nombre d'heures de cours et prix total)
