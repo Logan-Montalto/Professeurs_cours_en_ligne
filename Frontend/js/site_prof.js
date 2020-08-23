@@ -6,7 +6,7 @@
  * @date 09-July-2020
  */
 
-// Tableau Associatif
+/* Tableau Associatif */
 
 var primaire = {
     P01: {Nom: 'Farnsworth', Prenom: 'Hubert', Niveau: "Primaire", Matieres: "Mathématiques", Tarif: 7},
@@ -29,19 +29,20 @@ var superieur = {
 
 var niveau = [primaire, secondaire, superieur];
 
+/**
+ * Fonction qui va appeler les fonctions de tri au chargement de la page.
+ */
+
 function initialisationPage() {
     triPrimaire();
     triSecondaire();
     triSuperieur();
 }
 
-// Liste déroulante dynamique pour le choix de la matière en fonction du niveau de cours
-
 /**
+ * Fonction qui exécute les instructions correspondantes au cas sélectionné avec à l'instruction switch
  *
- *
- * @param form
- * @constructor
+ * @param form [La fonction sera appelée par l'évènement onChange]
  */
 
 function Choix(form) {
@@ -75,7 +76,11 @@ function Choix(form) {
     }
 }
 
-// Liste déroulante dynamique pour le choix du professeur en fonction de la matière et du niveau de cours
+/**
+ * Fonction qui affiche les profs disponibles en fontion du niveau et de la matière
+ *
+ * @param form [La fonction sera appelée par l'évènement onChange]
+ */
 
 function Prof(form){
     document.formMatiere.Profs.innerHTML = "<option>--- Choisissez un professeur ---</option>";
@@ -95,13 +100,12 @@ function Prof(form){
     }
 }
 
-// Création du tableau de réservations de cours particuliers
-
 /**
+ * Fonction qui va générer le tableau associatif de la réservation
  *
- *
- * @param form
- * @constructor
+ * @param m [Nom de l'élève entré dans le formulaire]
+ * @param n [Date sélectionnée dans le formulaire]
+ * @param o [Durée sélectionnée dans le formulaire]
  */
 
 let tableau = [];
@@ -127,14 +131,9 @@ function genererTableau(m, n, o) {
     tableau.push(eleve);
 }
 
-function ajouterCoursParticuliers(form) {
-    let nomEleve = form.nom.value;
-    let date = form.date.value;
-    let duree = form.duree.value;
-    genererTableau(nomEleve, date, duree);
-    affichageReservations();
-    return false;
-}
+/**
+ * Fonction qui affiche le tableau en tableau HTML
+ */
 
 function affichageReservations() {
     let ligne = "";
@@ -144,7 +143,27 @@ function affichageReservations() {
     document.getElementById("cours_particuliers").innerHTML = ligne;
 }
 
-// Fonction tri Niveau Primaire
+/**
+ * Fonction qui va récupérer les valeur du formulaire et les afficher
+ * La fonction appelle la fonction genererTableau() avec les paramètres nomEleve, date, duree
+ * La fonction appelle la fonction affichageReservation()
+ *
+ * @param form [La fonction sera appelée par l'évènement onSubmit]
+ * @returns {boolean}
+ */
+
+function ajouterCoursParticuliers(form) {
+    let nomEleve = form.nom.value;
+    let date = form.date.value;
+    let duree = form.duree.value;
+    genererTableau(nomEleve, date, duree);
+    affichageReservations();
+    return false;
+}
+
+/**
+ * Fonction de tri par ordre alphabétique pour les professeurs du niveau Primaire
+ */
 
 let indexPrimaire;
 indexPrimaire = Object.keys(primaire);
@@ -157,7 +176,9 @@ function triPrimaire() {
     return indexPrimaire;
 }
 
-// Fonction tri Niveau Secondaire
+/**
+ * Fonction de tri par ordre alphabétique pour les professeurs du niveau Secondaire
+ */
 
 let indexSecondaire;
 indexSecondaire = Object.keys(secondaire);
@@ -170,7 +191,9 @@ function triSecondaire() {
     return indexSecondaire;
 }
 
-// Fontion de tri Niveau Supérieur
+/**
+ * Fonction de tri par ordre alphabétique pour les professeurs du niveau Supérieur
+ */
 
 let indexSuperieur;
 indexSuperieur = Object.keys(superieur);
