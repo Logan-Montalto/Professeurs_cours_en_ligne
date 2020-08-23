@@ -102,6 +102,9 @@ function Prof(form){
 
 /**
  * Fonction qui va générer le tableau associatif de la réservation
+ * avec le texte sélectionné de la liste déroulante des matières, le texte sélectionné de la liste déroulante des professeurs,
+ * ainsi que le tarif total (le tarif du professeur étant récupéré via la liste déroulante des niveaux et des professeurs).
+ * Ce tarif sera multiplié par la variable utilisée pour la durée pour avoir le prix total du cours particuliers.
  *
  * @param m [Nom de l'élève entré dans le formulaire]
  * @param n [Date sélectionnée dans le formulaire]
@@ -133,6 +136,7 @@ function genererTableau(m, n, o) {
 
 /**
  * Fonction qui affiche le tableau en tableau HTML
+ * Dans le tableau, il y aura le nom, la date, la matière, le professeur, la durée en heure et le prix total du cours
  */
 
 function affichageReservations() {
