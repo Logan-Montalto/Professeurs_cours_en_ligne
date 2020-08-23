@@ -29,13 +29,14 @@ var superieur = {
 
 var niveau = [primaire, secondaire, superieur];
 
-// tri matières
-
-function initialisationPage() {
-    console.log(tri());
-}
-
 // Liste déroulante dynamique pour le choix de la matière en fonction du niveau de cours
+
+/**
+ *
+ *
+ * @param form
+ * @constructor
+ */
 
 function Choix(form) {
     let n = form.Niveau.selectedIndex;
@@ -90,6 +91,13 @@ function Prof(form){
 
 // Création du tableau de réservations de cours particuliers
 
+/**
+ *
+ *
+ * @param form
+ * @constructor
+ */
+
 let tableau = [];
 function genererTableau(m, n, o) {
     let matieresTableau = document.formMatiere.Matieres;
@@ -129,17 +137,4 @@ function affichageReservations() {
     }
     document.getElementById("cours_particuliers").innerHTML = ligne;
 }
-
-// Fontion de tri
-let indexTache;
-indexTache = Object.keys(superieur);
-function tri() {
-    indexTache.sort(function(a,b) {
-        if (superieur[a].Matieres > superieur[b].Matieres) return 1;
-        if (superieur[a].Matieres < superieur[b].Matieres) return -1;
-        return 0;
-        });
-    return indexTache;
-}
-
 
