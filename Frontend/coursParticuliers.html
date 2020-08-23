@@ -2,11 +2,25 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Réservez vos cours particuliers</title>
     <script src="js/site_prof.js" type="text/javascript"></script>
     <link href="css/index.css" rel="stylesheet" type="text/css">
 </head>
 <body onload="initialisationPage()">
+
+    <div id="contenu">
+        <h1 id="header">Cours Particuliers en ligne</h1>
+
+        <nav>
+            <ul id="horizontal">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="coursParticuliers.html">Cours</a></li>
+                <li><a href="connexion.html">Connexion</a></li>
+                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
 <!-- Liste déroulante dynamique, choix du niveau qui fait apparaitre les matières -->
 <form name="formMatiere" action="#" onSubmit="return ajouterCoursParticuliers(this)">
     <table>
@@ -33,7 +47,7 @@
     <br><br>
 
     <!-- Cette section contient le formulaire pour cours en ligne -->
-        <fieldset>
+        <fieldset class="formulaireReserv">
             <legend>Réservation du cours particuliers</legend>
             <label for="nom">Nom de l'élève :</label>
             <input type="text" id="nom" name="nom" required><br>
@@ -49,24 +63,24 @@
             <input type="submit" value="Réserver cours particuliers">
         </fieldset>
     </form>
-<br>
-<section>
-    <table>
-        <thead>
-            <tr>
-                <th>Nom de l'élève</th>
-                <th>Date du cours</th>
-                <th>Matières</th>
-                <th>Professeur</th>
-                <th>Nombre d'heures de cours</th>
-                <th>Prix Total</th>
-            </tr>
-        </thead>
-        <tbody id='cours_particuliers'></tbody>
-    </table>
-</section>
+    <br>
+    <section>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nom de l'élève</th>
+                    <th>Date du cours</th>
+                    <th>Matières</th>
+                    <th>Professeur</th>
+                    <th>Nombre d'heures de cours</th>
+                    <th>Prix Total</th>
+                </tr>
+            </thead>
+            <tbody id='cours_particuliers'></tbody>
+        </table>
+    </section>
+    </div>
 </body>
-
 </html>
 
 
