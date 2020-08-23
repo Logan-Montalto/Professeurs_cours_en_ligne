@@ -6,7 +6,7 @@ body {
     background: #3cc4d3;
 }
 
-h1#head {
+h1#header {
     height: 258px;
     margin: 0;
     background: url("../img-site/cours.jpg") no-repeat;
@@ -49,7 +49,21 @@ div#contenu {
     background: #ffffff;
 }
 
-div#about p {
-    text-decoration: none;
 
+table {
+    border: 2px solid black;
+    margin: 0 auto;
+    text-align: center;
+}
+
+th, tr, td {
+    border: 1px solid black;
+}
+
+div#presentation {
+    padding: 0 25px 0 25px;
+}
+
+div#presentation fieldset {
+    margin-bottom: 1em;
 }
