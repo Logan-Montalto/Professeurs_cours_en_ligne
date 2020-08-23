@@ -67,14 +67,13 @@ div#contenu {
 
 
 table {
-    border: 2px solid black;
-    margin: 0 auto;
+    border: 2px solid deepskyblue;
+    margin: 1em auto;
     text-align: center;
-    margin-bottom: 1em;
 }
 
 th, tr, td {
-    border: 1px solid black;
+    border: 1px solid deepskyblue;
 }
 
 div#presentation {
@@ -111,11 +110,57 @@ fieldset.description {
     border-radius:10px 0;
 }
 
+
 form {
     margin-top: 1em;
 }
 
+legend {
+    text-align: left;
+    color:deepskyblue;
+    font-weight:bold
+}
+
 fieldset.formulaireReserv {
+    text-align: center;
     margin-left: 1em;
     margin-right: 1em;
+    padding:0 20px 20px 20px;
+    margin-bottom:10px;
+    border:1px solid deepskyblue;
+}
+
+label {
+    margin-top:10px;
+    display:block;
+}
+
+input, option {
+    background-color: #d5f3fa;
+}
+input {
+    padding:3px;
+    border:1px solid #7297ff;
+    border-radius:5px;
+    width:200px;
+    box-shadow:1px 1px 2px #a7d0d3 inset;
+}
+
+input[type=submit] {
+    box-shadow:1px 1px 1px deepskyblue;
+    cursor:pointer;
+}
+
+th {
+    background-color: #8bdefa;
+}
+
+select {
+    background-color: #d6faff;
+}
+
+td.listeDeroulante, select {
+    -moz-border-radius:10px 0;
+    -webkit-border-radius:10px 0;
+    border-radius:10px 10px;
 }
