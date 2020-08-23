@@ -17,5 +17,9 @@ Cependant, comme je ne dois plus repasser cette partie, les HTML sont toujours l
 
 Des pages web (html, js, css) contenant :
 
-- une liste déroulante dynamique permettant de choisir un niveau d'étude et la matière adéquate ainsi que le professeur disponible pour cette matière
-- un tableau récapitulatif de la réservation du cours particuliers (Nom de l'élève, date du cours, Professeur, Nombre d'heures de cours et prix total)
+- Une page d'accueil présentant les différents professeurs disponibles avec leur photo, leur nom et prénom, leur matière et leur tarif à l'heure
+- Une liste déroulante dynamique permettant de choisir un niveau d'étude et la matière adéquate ainsi que le professeur disponible pour cette matière
+- Un formulaire pour le nom de l'élève, la date du cours et le nombre d'heures de cours désirées
+- Un tableau récapitulatif de la réservation du cours particuliers (Nom de l'élève, date du cours, Professeur, Nombre d'heures de cours et prix total)
+- Une page connexion et une page inscription servant uniquement de navigation (car pas de base de données à faire finalement)
+- Une page contenant 3 liens vers d'autres sites
