@@ -22,29 +22,29 @@
         </nav>
 
 <!-- Liste déroulante dynamique, choix du niveau qui fait apparaitre les matières -->
-<form name="formMatiere" action="#" onSubmit="return ajouterCoursParticuliers(this)">
-    <table>
-        <tr>
-            <th>Niveau de cours&nbsp;:</th>
-            <th>Matières&nbsp;:</th>
-            <th>Professeurs&nbsp;:</th>
-        </tr>
-        <tr>
-            <td><select name="Niveau" onChange='Choix(this.form)'>
-                <option>--- Choisissez un niveau d'études ---</option>
-                <option>Primaire</option>
-                <option>Secondaire</option>
-                <option>Supérieur</option>
-            </select></td>
-            <td><select id="Matieres" name="Matieres" onChange='Prof(this.form)'>
-                <option>--- Choisissez une matière ---</option>
-            </select></td>
-            <td><select id="Profs" name="Profs">
-                <option>--- Choisissez un professeur ---</option>
-            </select></td>
-        </tr>
-    </table>
-    <br><br>
+    <form name="formMatiere" action="#" onSubmit="return ajouterCoursParticuliers(this)">
+        <table>
+            <tr>
+                <th>Niveau de cours&nbsp;:</th>
+                <th>Matières&nbsp;:</th>
+                <th>Professeurs&nbsp;:</th>
+            </tr>
+            <tr>
+                <td class="listeDeroulante"><select name="Niveau" onChange='Choix(this.form)'>
+                    <option>--- Choisissez un niveau d'études ---</option>
+                    <option>Primaire</option>
+                    <option>Secondaire</option>
+                    <option>Supérieur</option>
+                </select></td>
+                <td class="listeDeroulante"><select id="Matieres" name="Matieres" onChange='Prof(this.form)'>
+                    <option>--- Choisissez une matière ---</option>
+                </select></td>
+                <td class="listeDeroulante"><select id="Profs" name="Profs">
+                    <option>--- Choisissez un professeur ---</option>
+                </select></td>
+            </tr>
+        </table>
+        <br>
 
     <!-- Cette section contient le formulaire pour cours en ligne -->
         <fieldset class="formulaireReserv">
@@ -58,7 +58,7 @@
 
             <!-- duree -->
             <label for="duree">Durée en heures : </label>
-            <input id="duree" name="duree" type="number" min="1" max="15" step="1" required><br>
+            <input id="duree" name="duree" type="number" min="1" max="15" step="1" required><br><br>
 
             <input type="submit" value="Réserver cours particuliers">
         </fieldset>
@@ -78,7 +78,7 @@
             </thead>
             <tbody id='cours_particuliers'></tbody>
         </table>
-    </section>
+    </section><br>
     </div>
 </body>
 </html>
