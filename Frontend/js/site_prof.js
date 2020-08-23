@@ -29,6 +29,12 @@ var superieur = {
 
 var niveau = [primaire, secondaire, superieur];
 
+function initialisationPage() {
+    triPrimaire();
+    triSecondaire();
+    triSuperieur();
+}
+
 // Liste déroulante dynamique pour le choix de la matière en fonction du niveau de cours
 
 /**
@@ -45,25 +51,25 @@ function Choix(form) {
         case 1 :
              document.formMatiere.Matieres.innerHTML = "<option>--- Choisissez une matière ---</option>";
             var f=document.formMatiere.Matieres;
-            for (let i in primaire) {
+            for (let i = 0; i < indexPrimaire.length; i++) {
                 f.length++;
-                f.options[f.length-1].text = primaire[i].Matieres;
+                f.options[f.length-1].text = primaire[indexPrimaire[i]].Matieres;
             }
             break;
         case 2 :
             document.formMatiere.Matieres.innerHTML = "<option>--- Choisissez une matière ---</option>";
             var d=document.formMatiere.Matieres;
-            for (let i in secondaire) {
+            for (let i = 0; i < indexSecondaire.length; i++) {
                 d.length++;
-                d.options[d.length-1].text = secondaire[i].Matieres;
+                d.options[d.length-1].text = secondaire[indexSecondaire[i]].Matieres;
             }
             break;
         case 3 :
             document.formMatiere.Matieres.innerHTML = "<option>--- Choisissez une matière ---</option>";
             var c=document.formMatiere.Matieres;
-            for (let i in superieur) {
+            for (let i = 0; i < indexSuperieur.length; i++) {
                 c.length++;
-                c.options[c.length-1].text = superieur[i].Matieres;
+                c.options[c.length-1].text = superieur[indexSuperieur[i]].Matieres;
             }
             break;
     }
@@ -137,4 +143,45 @@ function affichageReservations() {
     }
     document.getElementById("cours_particuliers").innerHTML = ligne;
 }
+
+// Fonction tri Niveau Primaire
+
+let indexPrimaire;
+indexPrimaire = Object.keys(primaire);
+function triPrimaire() {
+    indexPrimaire.sort(function(a,b) {
+        if (primaire[a].Matieres > primaire[b].Matieres) return 1;
+        if (primaire[a].Matieres < primaire[b].Matieres) return -1;
+        return 0;
+    });
+    return indexPrimaire;
+}
+
+// Fonction tri Niveau Secondaire
+
+let indexSecondaire;
+indexSecondaire = Object.keys(secondaire);
+function triSecondaire() {
+    indexSecondaire.sort(function(a,b) {
+        if (secondaire[a].Matieres > secondaire[b].Matieres) return 1;
+        if (secondaire[a].Matieres < secondaire[b].Matieres) return -1;
+        return 0;
+    });
+    return indexSecondaire;
+}
+
+// Fontion de tri Niveau Supérieur
+
+let indexSuperieur;
+indexSuperieur = Object.keys(superieur);
+function triSuperieur() {
+    indexSuperieur.sort(function(a,b) {
+        if (superieur[a].Matieres > superieur[b].Matieres) return 1;
+        if (superieur[a].Matieres < superieur[b].Matieres) return -1;
+        return 0;
+        });
+    return indexSuperieur;
+}
+
+
 
