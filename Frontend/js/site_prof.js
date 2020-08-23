@@ -106,25 +106,17 @@ function genererTableau(m, n, o) {
         var nomComplet = niveauSelect[i].Nom + " " + niveauSelect[i].Prenom;
         if ( nomComplet === profSelectTableau) {
             tarifTot = niveauSelect[i].Tarif * o;
-            console.log(tarifTot);
         }
     }
-    console.log(matieresSelectTableau);
-    console.log(niveauSelect);
-    console.log(profSelectTableau);
 
     let eleve = {nom: m, date: n, matiere: matieresSelectTableau, professeur: profSelectTableau, duree: o, prix: tarifTot};
     tableau.push(eleve);
-    console.log(tableau);
 }
 
 function ajouterCoursParticuliers(form) {
     let nomEleve = form.nom.value;
     let date = form.date.value;
     let duree = form.duree.value;
-    console.log(nomEleve);
-    console.log(date);
-    console.log(duree);
     genererTableau(nomEleve, date, duree);
     affichageReservations();
     return false;
@@ -133,8 +125,7 @@ function ajouterCoursParticuliers(form) {
 function affichageReservations() {
     let ligne = "";
     for (let p in tableau) {
-        ligne += "<tr><td>" + tableau[p].nom + "</td><td>" + tableau[p].date + "</td><td>" + tableau[p].matiere + "</td><td>" + tableau[p].professeur + "</td><td>" + tableau[p].duree + "</td><td>" + tableau[p].prix.toFixed(2) + "€" + "</td></tr>";
-        console.log(ligne);
+        ligne += "<tr><td>" + tableau[p].nom + "</td><td>" + tableau[p].date + "</td><td>" + tableau[p].matiere + "</td><td>" + tableau[p].professeur + "</td><td>" + tableau[p].duree + " h " + "</td><td>" + tableau[p].prix.toFixed(2) + "€" + "</td></tr>";
     }
     document.getElementById("cours_particuliers").innerHTML = ligne;
 }
@@ -150,3 +141,5 @@ function tri() {
         });
     return indexTache;
 }
+
+
