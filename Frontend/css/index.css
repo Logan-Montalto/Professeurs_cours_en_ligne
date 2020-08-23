@@ -13,7 +13,23 @@ h1#header {
 }
 
 h1 {
+    font-size: 30px;
+    text-shadow: -1px -1px #eee, 1px 1px #888, -3px 0 4px #000;
+    color: deepskyblue;
     text-align: left;
+}
+
+h1#header span {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+h2 {
+    text-decoration: double underline;
+}
+
+h3 {
+text-decoration: underline dotted;
 }
 
 ul#horizontal {
@@ -54,6 +70,7 @@ table {
     border: 2px solid black;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 1em;
 }
 
 th, tr, td {
@@ -66,4 +83,43 @@ div#presentation {
 
 div#presentation fieldset {
     margin-bottom: 1em;
+}
+
+div#presentation p {
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    -moz-border-radius:10px 0;
+    -webkit-border-radius:10px 0;
+    border-radius:10px 10px;
+}
+
+h4 {
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+fieldset.description {
+    background-color: #3cc4d3;
+    -moz-border-radius:10px 0;
+    -webkit-border-radius:10px 0;
+    border-radius:10px 0;
+}
+
+#cours_particuliers {
+
+}
+
+form {
+    margin-top: 1em;
+}
+
+fieldset.formulaireReserv {
+    margin-left: 1em;
+    margin-right: 1em;
 }
